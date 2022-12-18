@@ -27,7 +27,7 @@ export const popularPostsSlice = createSlice({
     postsRequestSuccessAfter: (state, action) => {
       state.postLoading = 'loaded';
       state.popularPosts =
-        [...state.popularPosts, ...action.payload.popularPosts];
+        [...state.popularPosts, ...action.payload.children];
       state.error = '';
       state.after = action.payload.after;
       state.isLast = !action.payload.after;
@@ -37,7 +37,7 @@ export const popularPostsSlice = createSlice({
       state.error = action.error;
     },
     changePage: (state, action) => {
-      state.page = action.payload.page;
+      state.page = action.payload;
       state.after = '';
       state.isLast = false;
     },

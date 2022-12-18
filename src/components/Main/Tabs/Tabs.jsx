@@ -41,9 +41,6 @@ export const Tabs = () => {
       window.removeEventListener('resize', debounceResize);
     };
   }, []);
-  // const handleClick = id => {
-  //   setList(list.filter(item => item.id !== id));
-  // };
 
   return (
     <div className={style.container}>
