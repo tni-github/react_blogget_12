@@ -18,6 +18,7 @@ export const popularPostsSlice = createSlice({
       state.page = action.payload;
       state.after = '';
       state.isLast = false;
+      state.popularPosts = [];
     },
   },
   extraReducers: {
